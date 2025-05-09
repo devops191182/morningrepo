@@ -1,0 +1,17 @@
+---
+- name: Create S3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    bucket_name: ansible-projet-9am
+
+  tasks:
+    - name: Create an S3 bucket
+      amazon.aws.s3_bucket:
+        name: "{{ bucket_name }}"
+        state: present
+        region: us-east-1
+      register: s3_result
+
