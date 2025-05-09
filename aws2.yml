@@ -5,7 +5,7 @@
   gather_facts: false
 
   vars:
-    bucket_name: ansible-projet-9am
+    bucket_name: ansible-jenkins-auto-run25
 
   tasks:
     - name: Create an S3 bucket
